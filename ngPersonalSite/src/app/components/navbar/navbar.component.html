@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <div *ngIf="!megaManAction">
+        <img src="https://e7.pngegg.com/pngimages/462/817/png-clipart-mega-man-8-mega-man-4-mega-man-x8-proto-man-mega-man-3-sprite-rectangle-mega-man-zx.png" alt="mega man resting" width="60 height=60" (click)="shoot()">
+      </div>
+      <div *ngIf="megaManAction">
+        <img src="https://www.pngfind.com/pngs/m/24-242236_mega-man-pixel-art-png-download-megaman-sprite.png" alt="mega man action" width="80 height=75" (click)="megaManAction=false">
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="home">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about']">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/projects']">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/resume']">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/com323']">Com 323</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/login']">Login</a>
+        </li>
+      </ul>
+    </div>
+  <!-- </div> -->
+</nav>

@@ -1,0 +1,25 @@
+.bodycolor{
+  background-color: lightblue;
+}
+
+nav {
+  background-color: lightblue;
+}
+
+.divhead, .parahead {
+  font-weight: bold;
+  color: black;
+}
+
+.about{
+  font-weight: normal;
+}
+
+.git {
+  color: darkgreen;
+}
+
+table, tr, td {
+  border: medium solid white;
+  text-align: center;
+}
