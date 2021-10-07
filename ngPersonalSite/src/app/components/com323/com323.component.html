@@ -10,25 +10,17 @@
   <p class="container">You may also use any of the Links above which will tell you a litle more about me :)</p>
 </div>
 
+<button class="btn btn-success" *ngIf="loggedIn()">//TODO: Make click event for Create Post</button>
+
 <h3 class="container">Posts</h3>
 
 <!-- Accordion will hold the Post and Comment Entities -->
 <accordion class="container">
-  <accordion-group heading="Post Title and Date go Here...">
-    <p>Content Goes Here</p>
-    <button class="btn btn-primary">Comment</button> <!--add event to modal-->
-  </accordion-group>
-  <accordion-group heading="Post Title and Date go Here...">
-    <p>Content Goes Here</p>
-    <button class="btn btn-primary">Comment</button> <!--add event to modal-->
-  </accordion-group>
-  <accordion-group heading="Post Title and Date go Here...">
-    <p>Content Goes Here</p>
-    <button class="btn btn-primary">Comment</button> <!--add event to modal-->
-  </accordion-group>
-  <accordion-group heading="Post Title and Date go Here...">
-    <p>Content Goes Here</p>
-    <button class="btn btn-primary">Comment</button> <!--add event to modal-->
-  </accordion-group>
+  <div *ngFor="let post of posts">
+    <accordion-group heading={{post.title}}>
+      <p>{{post.postContent}}</p>
+      <button class="btn btn-primary">Comment</button> <!--add event to modal-->
+    </accordion-group>
+  </div>
 </accordion>
 

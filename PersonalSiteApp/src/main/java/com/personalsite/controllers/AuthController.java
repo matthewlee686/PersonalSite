@@ -18,7 +18,7 @@ import com.personalsite.services.UserService;
 // We do not use api pathway here! Because those pathways require authentication...
 
 @RestController
-@CrossOrigin("http://localhost:4250")
+@CrossOrigin({"*", "http://localhost:4250"})
 public class AuthController {
 
 	@Autowired

@@ -19,6 +19,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
+import { PostsService } from './services/posts.service';
+import { LogoutComponent } from './components/logout/logout.component';
 // import { ParticlesModule } from 'angular-particle';
 
 @NgModule({
@@ -32,7 +34,8 @@ import { AuthService } from './services/auth.service';
     ResumeComponent,
     NotFoundComponent,
     Com323Component,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { AuthService } from './services/auth.service';
     // ParticlesModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    PostsService
   ],
   bootstrap: [AppComponent]
 })

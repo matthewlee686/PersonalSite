@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Post } from 'src/app/models/post';
+import { AuthService } from 'src/app/services/auth.service';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-com323',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Com323Component implements OnInit {
 
-  constructor() { }
+  constructor(
+    private postSvc: PostsService,
+    private auth: AuthService
+    ) { }
+
+  posts: Post[] = [];
 
   ngOnInit(): void {
+    this.index();
+  }
+
+  index() {
+    this.postSvc.index().subscribe(
+      data => {
+        this.posts = data;
+      },
+      fail => {
+        console.log("Error retrieving posts")
+      }
+    )
+  }
+
+  loggedIn(): boolean {
+    return this.auth.checkLogin();
   }
 
 }

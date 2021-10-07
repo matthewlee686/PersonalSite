@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `user` ;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(75) NOT NULL,
+  `password` VARCHAR(200) NOT NULL,
   `role` VARCHAR(45) NULL,
   `active` TINYINT NULL,
   PRIMARY KEY (`id`))
@@ -88,7 +88,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `com323db`;
-INSERT INTO `user` (`id`, `username`, `password`, `role`, `active`) VALUES (1, 'matt', '$2a$10$IhIsRehSZrIoW.BT8YL9neLf4ZpYZDgOAtLXW0VeBC5MqEMnEJ.Oi', 'admin', 1);
+INSERT INTO `user` (`id`, `username`, `password`, `role`, `active`) VALUES (1, 'matt', '$2a$10$nnkNgUSaC7ptHhFV.jjAc.cWsUOcpe/nQkh4uSxCiZ/pjBiHJYXiC', 'Admin', 1);
 
 COMMIT;
 

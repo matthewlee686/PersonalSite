@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ export class NavbarComponent implements OnInit {
 
   megaManAction: Boolean = false;
 
-  constructor() { }
+  constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
   }
@@ -18,6 +19,10 @@ export class NavbarComponent implements OnInit {
 
     this.megaManAction = true;
 
+    }
+
+    loggedIn(): boolean {
+      return this.auth.checkLogin();
     }
 
   }
